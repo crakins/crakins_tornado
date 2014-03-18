@@ -1,0 +1,82 @@
+html, body, .container{ height: 100%; margin: 0; padding: 0; }
+body{
+	min-width: 320px;
+	overflow: hidden;
+	background:#FFFFFF;
+}
+body{
+	font-family: Helvetica;
+	font-size: 20px;
+	font-weight: 200;
+	letter-spacing: 2px;
+	line-height: 14px;
+	color: #FFFFFF;
+}
+
+a{
+	color: #999;
+	text-decoration: underline;
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+}
+a:hover{
+	color: #e5512d;
+	background-color:#FFF;
+}
+
+.clr {
+	clear:both
+}
+
+.header {
+	width:100%;
+	top:0;
+	height:50px;
+	padding:15px 0;
+	text-align:center;
+	background:#FFFFFF;
+	/*background:url(../images/bg-01.jpg) repeat #ee4e1d;*/
+	font-family:'AmaticSCBold', Helvetica;
+	font-size: 53px;
+	font-weight: normal;
+	word-spacing:5px;
+	letter-spacing: 0px;
+	line-height: 55px;
+	color: #999;
+} 
+
+.container{
+	max-width:100%;
+	margin:0 auto;
+	text-align:center;
+}
+
+.content{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.image-swap{
+	width:680;
+	height:240;
+	background-image:url(crakinscom.png);
+	background-position: 0 0;
+}
+
+.image-swap:hover{
+	background-image:url(crakinscom_yellow.png);
+}
+
+.copyright{
+	font-family:Helvetica;
+	font-size: 12px;
+	font-weight: bold;
+	word-spacing:5px;
+	letter-spacing: 0px;
+	line-height: 20px;
+	color: #000000;
+	margin-top:10px;
+	text-align:center;
+}
