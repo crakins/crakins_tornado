@@ -8,7 +8,7 @@ import time, datetime, pytz
 class MainHandler(tornado.web.RequestHandler):
 
 	def get(self):
-		imagePath = "/images/crakinscom.png"
+		imagePath = "images/crakinscom.png"
 		self.render("index.html", imagePath=imagePath)
 		
 	def post(self):
@@ -29,8 +29,8 @@ class MainHandler(tornado.web.RequestHandler):
 
 
 handlers = [
-	(r"/images/(.*)",tornado.web.StaticFileHandler, {"path": "/home/rakins/Dev/crakins_tornado/images"}),
-	(r"/css/(.*)",tornado.web.StaticFileHandler, {"path": "/home/rakins/Dev/crakins_tornado/css"}),
+	(r"/images/(.*)",tornado.web.StaticFileHandler, {"path": "images"}),
+	(r"/css/(.*)",tornado.web.StaticFileHandler, {"path": "css"}),
 	(r"/", MainHandler),
 ]
 
