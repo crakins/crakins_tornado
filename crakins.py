@@ -3,6 +3,7 @@ import tornado.web
 import os.path
 import sqlite3 as db
 import time, datetime, pytz
+from riverlevel import get_level
 
     
 class MainHandler(tornado.web.RequestHandler):
@@ -27,19 +28,28 @@ class MainHandler(tornado.web.RequestHandler):
 		connection.close()
 		self.redirect("/", status=303)
 
+class RiverHandler(tornado.web.RequestHandler):
+
+	def get(self):
+		corivers = {'Browns Canyon': '07091200', 'Pine Creek': '07087050', 'The Numbers': '07087050', 'Royal Gorge': '07094500', 'Upper East' : '09112200', 'Daisy Creek' : '09111500', 'Slate' : '09111500' }
+		levels = {}		
+		for k, v in corivers.items():
+			levels[k] = get_level(v)	
+		self.render("corivers.html", levels=levels)
 
 handlers = [
 	(r"/images/(.*)",tornado.web.StaticFileHandler, {"path": "images"}),
 	(r"/css/(.*)",tornado.web.StaticFileHandler, {"path": "css"}),
 	(r"/", MainHandler),
+	(r"/rivers", RiverHandler),
 ]
 
 settings = dict(
 			template_path=os.path.join(os.path.dirname(__file__), "templates"),
 )
 
-application = tornado.web.Application(handlers, **settings)
+application = tornado.web.Application(handlers, debug=True, **settings)
 
 if __name__ == "__main__":
-    application.listen(8888)
+    application.listen(8000)
     tornado.ioloop.IOLoop.instance().start()

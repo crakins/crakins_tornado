@@ -10,11 +10,11 @@ body{
 	font-weight: 200;
 	letter-spacing: 2px;
 	line-height: 14px;
-	color: #FFFFFF;
+	color: #000000;
 }
 
 a{
-	color: #999;
+	color: #e5512d;
 	text-decoration: underline;
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
@@ -22,14 +22,29 @@ a{
 	transition: all 0.2s linear;
 }
 a:hover{
-	color: #e5512d;
-	background-color:#FFF;
+	color: #000000;
+	background-color:#FFFF00;
 }
 
 img {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
+}
+
+table, td, th
+{
+	max-width:100%;
+	margin:0 auto;
+	text-align:center;
+	border: 1px solid green;
+	padding: 5px 15px 5px 15px;
+}
+th
+{
+	text-align:left;	
+	background-color:green;
+	color:white;
 }
 
 .clr {
@@ -60,8 +75,11 @@ img {
 }
 
 .content{
-	margin-left: auto;
-	margin-right: auto;
+	max-width:100%;
+	margin:0 auto;
+	text-align:center;	
+	border: 2px;
+	color: #e5512d;
 }
 
 .image-swap{

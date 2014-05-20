@@ -1,0 +1,4 @@
+*.pyc
+/logs/*
+images/*
+/bin/*

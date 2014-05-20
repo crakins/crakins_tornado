@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br>
+<p><h1>Arkansas Valley, CO</h1></p>
+<table>
+<tr><th>River</th><th>Class</th><th>Range</th><th>Level</th></tr>
+<tr>
+<td><a href="http://www.americanwhitewater.org/content/River/detail/id/358" target="_blank">Browns Canyon</a></td>
+<td>III</td>
+<td>300-5000 cfs</td>
+<td>{{ levels['Browns Canyon'] }} cfs</td>
+</tr>
+<tr>
+<td><a href="http://www.americanwhitewater.org/content/River/detail/id/360" target="_blank">Royal Gorge</a></td>
+<td>III-IV</td>
+<td>300-7000 cfs</td>
+<td>{{ levels['Royal Gorge'] }} cfs</td>
+</tr>
+<tr>
+<td><a href="http://www.americanwhitewater.org/content/River/detail/id/356" target="_blank">The Numbers</a></td>
+<td>IV</td>
+<td>300-3500 cfs</td>
+<td>{{ levels['The Numbers'] }} cfs</td>
+</tr>
+<tr>
+<td><a href="http://www.americanwhitewater.org/content/River/detail/id/355" target="_blank">Pine Creek</a></td>
+<td>IV-V</td>
+<td>200-5000 cfs</td>
+<td>{{ levels['Pine Creek'] }} cfs</td>
+</tr>
+<tr>
+<td><a href="http://www.americanwhitewater.org/content/River/detail/id/3110/" target="_blank">Clear Creek of Ark</a></td>
+<td>V</td>
+<td>150-1000 cfs</td>
+<td>??? cfs</td>
+</tr>
+</table>
+<br>
+<br>
+<p><h1>Crested Butte, CO</h1></p>
+<table>
+<tr><th>River</th><th>Class</th><th>Range</th><th>Level</th></tr>
+<tr>
+<td><a href="http://www.americanwhitewater.org/content/River/detail/id/3379/" target="_blank">Upper East</a></td>
+<td>IV</td>
+<td>600-3000 cfs</td>
+<td>{{ levels['Upper East'] }} cfs</td>
+</tr>
+<tr>
+<td><a href="http://www.americanwhitewater.org/content/River/detail/id/3378/" target="_blank">Daisy Creek</a></td>
+<td>V</td>
+<td>500-2500 cfs</td>
+<td>{{ levels['Daisy Creek'] }} cfs</td>
+</tr>
+<tr>
+<td><a href="http://www.americanwhitewater.org/content/River/detail/id/3377/" target="_blank">Slate</a></td>
+<td>V</td>
+<td>500-2500 cfs</td>
+<td>{{ levels['Slate'] }} cfs</td>
+</tr>
+<tr>
+<td><a href="http://www.americanwhitewater.org/content/River/detail/id/3375/" target="_blank">Oh Be Joyful</a></td>
+<td>V</td>
+<td>500-1800 cfs</td>
+<td>??? cfs</td>
+</tr>
+</table>
+<br><br>
+{% end %}
