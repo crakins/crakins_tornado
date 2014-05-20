@@ -1,12 +1,11 @@
-html, body, .container{ height: 100%; margin: 0; padding: 0; }
+html, body, .container{ height: 100%; margin: 0; padding: 0; overflow: auto }
 body{
 	min-width: 320px;
-	overflow: hidden;
 	background:#FFFFFF;
 }
 body{
 	font-family: Helvetica;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: 200;
 	letter-spacing: 2px;
 	line-height: 14px;
@@ -32,13 +31,21 @@ img {
     width: auto\9; /* ie8 */
 }
 
+span {
+	font-size: 10px;
+}
+
 table, td, th
 {
-	max-width:100%;
+	max-width: 100%;
 	margin:0 auto;
 	text-align:center;
 	border: 1px solid green;
 	padding: 5px 15px 5px 15px;
+}
+
+table {
+	border: 0px;
 }
 th
 {

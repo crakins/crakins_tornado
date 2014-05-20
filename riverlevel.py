@@ -10,5 +10,18 @@ def get_level(riverID):
 	try:		
 		level = soup2.td.string	
 	except: 
-		level = " "
+		level = "N/A"
+	return level
+
+def get_level_cswc(riverID):
+	url = "http://www.dwr.state.co.us/SurfaceWater/data/detail_graph.aspx?ID=%s&MTYPE=DISCHRG" % (riverID)
+
+	response = requests.get(url)
+	soup = BeautifulSoup(response.text)
+	tag = soup.find_all(id="ctl00_ContentPlaceHolder1_recentvaluelabel")
+	soup2 = BeautifulSoup(str(tag))	
+	try:		
+		level = soup2.span.string
+	except: 
+		level = "N/A"
 	return level

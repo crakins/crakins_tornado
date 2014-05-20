@@ -3,7 +3,7 @@ import tornado.web
 import os.path
 import sqlite3 as db
 import time, datetime, pytz
-from riverlevel import get_level
+from riverlevel import get_level, get_level_cswc
 
     
 class MainHandler(tornado.web.RequestHandler):
@@ -31,11 +31,17 @@ class MainHandler(tornado.web.RequestHandler):
 class RiverHandler(tornado.web.RequestHandler):
 
 	def get(self):
-		corivers = {'Browns Canyon': '07091200', 'Pine Creek': '07087050', 'The Numbers': '07087050', 'Royal Gorge': '07094500', 'Upper East' : '09112200', 'Daisy Creek' : '09111500', 'Slate' : '09111500' }
-		levels = {}		
+		# get levels from USGS
+		corivers = {'Browns Canyon': '07091200', 'Pine Creek': '07087050', 'The Numbers': '07087050', 'Upper East' : '09112200', 'Daisy Creek' : '09111500', 'Slate' : '09111500' }
+		levels = {}
+		levels_cswc = {}
 		for k, v in corivers.items():
-			levels[k] = get_level(v)	
-		self.render("corivers.html", levels=levels)
+			levels[k] = get_level(v)
+		# get levels from colorado's suface water conditions
+		corivers_cswc = {'Clear Creek of Ark' : 'CCACCRCO', 'Royal Gorge' : 'ARKWELCO'}
+		for k, v in corivers_cswc.items():
+			levels_cswc[k] = get_level_cswc(v)
+		self.render("corivers.html", levels=levels, levels_cswc = levels_cswc)
 
 handlers = [
 	(r"/images/(.*)",tornado.web.StaticFileHandler, {"path": "images"}),
