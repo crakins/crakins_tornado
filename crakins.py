@@ -8,7 +8,7 @@ from riverlevel import get_level, get_level_cswc
 
 def _execute(query):
     dbPath = '/home/dev/crakins_tornado/emails.db'
-    connection = db.connect('emails.db')
+    connection = db.connect(dbPath)
     cur = connection.cursor()
     try:
         cur.execute(query)
