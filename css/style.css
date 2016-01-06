@@ -1,11 +1,11 @@
-html, body, .container{ height: 100%; margin: 0; padding: 0; overflow: auto }
+html, body, .container{ height: 100%; margin: 0; padding: 10; overflow: auto }
 body{
 	min-width: 320px;
 	background:#FFFFFF;
 }
 body{
 	font-family: Helvetica;
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: 200;
 	letter-spacing: 2px;
 	line-height: 14px;
@@ -14,15 +14,16 @@ body{
 
 a{
 	color: #e5512d;
-	text-decoration: underline;
+	text-decoration: underline; 
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
 	-o-transition: all 0.2s linear;
-	transition: all 0.2s linear;
+	transition: all 0.2s linear; 
 }
-a:hover{
-	color: #000000;
+
+a:hover#text{
 	background-color:#FFFF00;
+    font-size: 18px;
 }
 
 img {
@@ -40,18 +41,25 @@ table, td, th
 	max-width: 100%;
 	margin:0 auto;
 	text-align:center;
-	border: 1px solid green;
+	border: 1px solid gray;
 	padding: 3px 3px 3px 3px;
 }
 
 table {
 	border: 0px;
 }
+
 th
 {
 	text-align:left;	
-	background-color:green;
+	background-color:gray;
 	color:white;
+}
+
+li
+{
+   display:inline;
+   padding:2px;
 }
 
 .clr {
@@ -101,6 +109,8 @@ th
 .image-swap:hover{
 	background-image:url(../images/crakinscom_yellow.png);
 	background-repeat: no-repeat;
+	cursor: pointer; 
+	cursor: hand;
 }
 
 .copyright{

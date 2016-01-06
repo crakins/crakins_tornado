@@ -1,13 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<a href="/rivers">rivers</a>
-<!--<img src={{ imagePath }} alt="crakins.com"/>
 
-<form name="email" action="/" method="post" >
-		<ul>
-			<li><input type="text" name="email" class="inputbox" placeholder="you@yourmail.com" /></li>
-			<li><input type="submit" class="submit" value="Submit" /></li>
-		</ul>
-</form> -->
+<p>Welcome to <a id="text" href="/">crakins.com</a>. Let's keep in touch!</p>
+
+<br /><br />{% include "includes/social.html" %}
+<p>leave your email address to get updates</p>
+{% include "includes/email.html" %}
 {% end %}
