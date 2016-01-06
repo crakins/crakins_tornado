@@ -116,9 +116,11 @@ handlers = [
 	(r"/comingsoon", ComingSoon),
 ]
 
-settings = dict(
-			template_path=os.path.join(os.path.dirname(__file__), "templates"),
-)
+settings = {
+			"template_path": os.path.join(os.path.dirname(__file__), "templates"),
+			"xsrf_cookies": False,
+}
+
 
 application = tornado.web.Application(handlers, debug=True, **settings)
 
